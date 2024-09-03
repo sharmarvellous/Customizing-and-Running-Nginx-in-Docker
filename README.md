@@ -14,9 +14,9 @@ This guide demonstrates how to create, customize, and run an Nginx server using 
 
 Create a file named `Dockerfile` with the following content:
 
-\```dockerfile
+```dockerfile
 FROM nginx:alpine
-\```
+```
 
 This Dockerfile uses the official Nginx image based on Alpine Linux, which is lightweight and efficient.
 
@@ -24,9 +24,9 @@ This Dockerfile uses the official Nginx image based on Alpine Linux, which is li
 
 Build the Docker image using the following command:
 
-\```bash
+```bash
 docker build -t nginx_test:v0 -f Dockerfile .
-\```
+```
 
 This command builds a new Docker image tagged as `nginx_test:v0` using the instructions from the `Dockerfile`.
 
@@ -34,9 +34,9 @@ This command builds a new Docker image tagged as `nginx_test:v0` using the instr
 
 Run the Nginx container using the following command:
 
-\```bash
+```bash
 docker run -d -p 9090:80 nginx_test:v0
-\```
+```
 
 This command runs the `nginx_test:v0` image in a Docker container, mapping port 9090 on the host to port 80 in the container.
 
@@ -50,10 +50,10 @@ Navigate to `http://localhost:9090` in your web browser. You should see the defa
 
 Update the `Dockerfile` with the following content:
 
-\```dockerfile
+```dockerfile
 FROM nginx:alpine
 RUN echo "Overwrite Testing" > /usr/share/nginx/html/index.html
-\```
+```
 
 This modification overwrites the default Nginx homepage with custom content.
 
@@ -61,9 +61,9 @@ This modification overwrites the default Nginx homepage with custom content.
 
 Rebuild the Docker image with the new instructions:
 
-\```bash
+```bash
 docker build -t nginx_test:v1 -f Dockerfile .
-\```
+```
 
 This command rebuilds the Docker image and tags it as `nginx_test:v1`.
 
@@ -71,9 +71,9 @@ This command rebuilds the Docker image and tags it as `nginx_test:v1`.
 
 Run the new customized Nginx container:
 
-\```bash
+```bash
 docker run -d -p 9090:80 nginx_test:v1
-\```
+```
 
 ### 4. Accessing the Customized Nginx Page
 
@@ -85,9 +85,9 @@ Navigate to `http://localhost:9090` in your web browser. You should now see the 
 
 To stop a running container:
 
-\```bash
+```bash
 docker stop <container_name>
-\```
+```
 
 Replace `<container_name>` with the actual name of your container.
 
@@ -95,17 +95,17 @@ Replace `<container_name>` with the actual name of your container.
 
 To view all containers, including stopped ones:
 
-\```bash
+```bash
 docker ps -a
-\```
+```
 
 ### 3. Starting a Specific Container
 
 To start a specific container:
 
-\```bash
+```bash
 docker run -d -p 9090:80 nginx_test:v1
-\```
+```
 
 This command starts a new container using the `nginx_test:v1` image.
 
