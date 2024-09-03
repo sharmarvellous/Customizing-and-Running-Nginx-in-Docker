@@ -1,6 +1,7 @@
 # Customizing and Running Nginx in Docker
 
-This guide demonstrates how to create, customize, and run an Nginx server using Docker. [Checkout the full Article on Medium](https://medium.com/@sharmarvellous/customizing-and-running-nginx-in-docker-a-step-by-step-guide-4a09332d39fb)
+This guide demonstrates how to create, customize, and run an Nginx server using Docker. 
+[Checkout the full Article on Medium](https://medium.com/@sharmarvellous/customizing-and-running-nginx-in-docker-a-step-by-step-guide-4a09332d39fb)
 
 
 ## Table of Contents
